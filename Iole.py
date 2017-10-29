@@ -7,34 +7,20 @@ import sys
 import tree_init
 
 
-def main(argv):
+def main(argv, func):
+    output = ""
 
-    address = argv # set address to be the first parameter
-    # should not execute if file address is not a valid one
-    valid = False
-    try:
-        csv = open(address, 'r')
-        valid = True
-    except IOError:
-        print("File does not exist; ")
-        valid = False
-
-    if not valid or not address.endswith(".csv"):
-        print("Invalid file")
+    if func == '1':
+        output = tree_init.run(argv)
+    elif func == '2':
+        print("Not yet")
+    else:
+        print("Invalid argument, expected 1(Pairing) or 2(Expected Outcome)")
         exit(1)
-
-    str_csv = ""
-
-    for line in csv:
-        str_csv += line
-
-    # we need to send this back to the json
-    pair_csv = tree_init.run(str_csv)
-
 
 # Execution start
 
-main(sys.argv[1])
+main(sys.argv[1], sys.argv[2])
 
 
 
