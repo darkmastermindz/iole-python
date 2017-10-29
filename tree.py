@@ -4,4 +4,4 @@
 
 # guys please
 def run(student_hash):
-    print(student_hash)
+    print("hi")
