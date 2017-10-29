@@ -1,5 +1,7 @@
 
 # Gets raw string from a csv format and parses it into a hash
+import tree
+
 
 def run(str_csv):
     arr = str_csv.split("\n") # this returns an array where the first column is just labels
@@ -13,4 +15,4 @@ def run(str_csv):
         student_hash[id] = to_hash
         index += 1
 
-    print(student_hash)
+    return tree.run(student_hash)
