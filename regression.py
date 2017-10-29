@@ -7,7 +7,7 @@ def run(student_hash):
     num_questions = calc_num_questions(student_hash, ids)
     build = []
     avg_hash = get_avg_hash(student_hash, 1, num_questions, []) #answers should be found on odd numbers
-    print(avg_hash)
+   # print(avg_hash)
 
 
 def calc_num_questions(student_hash, ids):
@@ -20,7 +20,8 @@ def get_avg_hash(student_hash, answer, num_questions, avg_hash):
         answer += 2
         get_avg_hash(student_hash, answer, num_questions, avg_hash)
     else:
-        return avg_hash
+        print(avg_hash)
+        return avg_hash[:]
 
 
 def calc_avg(student_hash, answer):
