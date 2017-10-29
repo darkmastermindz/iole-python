@@ -7,7 +7,7 @@ def run(student_hash):
     num_questions = calc_num_questions(student_hash, ids)
     build = []
     avg_hash = get_avg_hash(student_hash, 1, num_questions, []) #answers should be found on odd numbers
-   # print(avg_hash)
+    print(student_hash) #this will print a lot depending on the file
 
 
 def calc_num_questions(student_hash, ids):
