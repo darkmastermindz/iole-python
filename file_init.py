@@ -24,12 +24,12 @@ def run(argv, func):
         str_csv += line
 
     # check which operation was selected
-    if func == '1':
-        return hash_generator.run(str_csv)
-    elif func == '2':
-        print("Not yet") # will later return the result from linear regression
-    else:
-        print("Invalid argument, expected 1(Pairing) or 2(Expected Outcome)")
-        exit(1)
+   # if func == '1':
+    return hash_generator.run(str_csv, func)
+    # elif func == '2':
+       # print("Not yet") # will later return the result from linear regression
+    # else:
+       # print("Invalid argument, expected 1(Pairing) or 2(Expected Outcome)")
+      #  exit(1)
 
 
